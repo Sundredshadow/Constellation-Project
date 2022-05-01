@@ -312,7 +312,7 @@ function setupUI() {
     // 2. Create an XHR object to download the web service
     // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/
     const xhr = new XMLHttpRequest();
-    const url = `https://people.rit.edu/eds7847/backgroundbg/index.php?url=${document.getElementById('urlText').value}`;
+    const url = `https://ethan-shea-star-project.herokuapp.com/index.php?url=${document.getElementById('urlText').value}`;
 
     // 3. set `onerror` handler
     xhr.onerror = () => console.log('error');
