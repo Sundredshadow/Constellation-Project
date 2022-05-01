@@ -5,6 +5,7 @@ const query = require('querystring');
 const htmlHandler = require('./htmlResponses.js');
 const jsonHandler = require('./jsonResponses.js');
 const scriptHandler = require('./scriptResponses.js');
+const removeHandler = require('./removeBg.js');
 
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 const handleQueryData = (request, response) => {
@@ -38,7 +39,7 @@ const urlStruct = {
     '/src/loader': scriptHandler.getScript,
     '/src/edsLIB': scriptHandler.getScript,
     '/src/flocking': scriptHandler.getScript,
-    '/index': scriptHandler.getScriptPHP,
+    '/src/removeBg' : removeHandler.getImageFromRemoveBg,
     notFound: jsonHandler.notFound,
   },
   HEAD: {

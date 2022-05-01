@@ -310,29 +310,29 @@ function setupUI() {
 
   document.querySelector('#getImage').onclick = () => {
     // 2. Create an XHR object to download the web service
-    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/
-    const xhr = new XMLHttpRequest();
-    const url = `https://ethan-shea-star-project.herokuapp.com/index.php?url=${document.getElementById('urlText').value}`;
-
-    // 3. set `onerror` handler
-    xhr.onerror = () => console.log('error');
-
-    // 4. set `onload` handler
-    xhr.onload = () => {
-
-    }; // end xhr.onload
-
-    // 5. open the connection using the HTTP GET method
-    xhr.open('GET', url);
-
-    // 6. we could send request headers here if we wanted to
-    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader
-
-    // 7. finally, send the request
-    xhr.send();
-    localStorage.clear();
-    window.location.reload();
-    ranAI = true;
+        // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/
+        const xhr = new XMLHttpRequest();
+        const url = '/src/removeBg';
+        
+        // 3. set `onerror` handler
+        xhr.onerror = () => console.log("error");
+        
+        // 4. set `onload` handler
+        xhr.onload = () => {
+            
+        }; // end xhr.onload
+        
+        // 5. open the connection using the HTTP GET method
+        xhr.open("GET",url);
+        
+        // 6. we could send request headers here if we wanted to
+        // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader
+        
+        // 7. finally, send the request
+        xhr.send();
+        
+        ReadMap();
+        ranAI=true;
   }; // end onclick
 }
 

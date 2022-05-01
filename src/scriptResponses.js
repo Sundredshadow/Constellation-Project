@@ -6,13 +6,7 @@ const getScript = (request, response, parsedUrl) => {
   response.end();
 };
 
-const getScriptPHP = (request, response, parsedUrl) => {
-  response.writeHead(200, { 'Content-Type': 'text/javascript' });
-  response.write(fs.readFileSync(`${__dirname}/..${`${parsedUrl.pathname}.php`}`));
-  response.end();
-}
-
 
 module.exports = {
-  getScript, getScriptPHP
+  getScript
 };
