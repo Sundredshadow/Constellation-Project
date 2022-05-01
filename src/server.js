@@ -6,7 +6,6 @@ const htmlHandler = require('./htmlResponses.js');
 const jsonHandler = require('./jsonResponses.js');
 const scriptHandler = require('./scriptResponses.js');
 
-
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 const handleQueryData = (request, response) => {
   const body = [];
