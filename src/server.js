@@ -38,6 +38,7 @@ const urlStruct = {
     '/src/loader': scriptHandler.getScript,
     '/src/edsLIB': scriptHandler.getScript,
     '/src/flocking': scriptHandler.getScript,
+    '/index': scriptHandler.getScriptPHP,
     notFound: jsonHandler.notFound,
   },
   HEAD: {
