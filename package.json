@@ -1,0 +1,31 @@
+{
+  "name": "tensorflowproj",
+  "version": "1.0.0",
+  "engine": {
+    "node": "16.15.0",
+    "npm": "8.5.5"
+  },
+  "description": "testing tensor flow may become part of final proj",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "pretest": "eslint ./src --fix",
+    "test": "echo \"Tests complete\"",
+    "nodemon": "nodemon --watch ./src ./src/server.js"
+  },
+  "author": "Ethan Shea",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow-models/body-pix": "^2.2.0",
+    "@tensorflow/tfjs": "^3.16.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.15"
+  }
+}

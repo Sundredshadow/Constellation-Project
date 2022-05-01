@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Star Project</title>
+	<link rel="stylesheet" type="text/css" href="css/default-styles.css">
+	<script src="./src/loader" type="module"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@1.0.0"></script>
+</head>
+<body>
+	<h1>Stars</h1>
+	<hr>
+    <canvas id="maincanvas" >
+	<img id="output" src="src/img/output.png" crossorigin='anonymous'/>
+	</canvas>
+	<div id="dialogButtons">
+		<div class="inputs">
+		<button id="Play">Play</button>
+		<input type="text" id="urlText" name="urlText">
+		<button id="getImage">Get Image</button>
+		</div>
+
+		<div class="inputs">
+			<label>Stars: 
+				<input type="range" min="1" max="100" value="1" class="slider" id="starSlider">
+			</label>
+			<label>Flock Size: 
+				<input type="range" min="1" max="50" value="10" class="slider" id="flockSizeSlider">
+			</label>
+			<label>Static Flock Size: 
+				<input type="range" min="1" max="500" value="79" class="slider" id="staticflockSizeSlider">
+			</label>
+
+			<label>Opacity: 
+				<input type="range" min="0" max="255" value="100" class="slider" id="opacity">
+			</label>
+			<label>Switch Time: 
+				<input type="range" min="1" max="100" value="6" class="slider" id="switchFrequency">
+			</label>
+			
+		</div>
+	</div>
+	<canvas id="hiddencanvas" hidden></canvas>
+</body>
+</html>

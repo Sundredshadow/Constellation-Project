@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "myFont";
+    src: url("fonts/BarlowSemiCondensed-ThinItalic.ttf");
+}
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: "myFont",'Courier New', Courier, monospace;
+    display: block;
+    background-color:#293132;
+    background-position:center top;
+    position: relative;
+}
+
+a{
+    color:white;
+}
+p{
+    text-align: center;
+    margin:1px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+iframe,img{
+    display: block;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#page{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    color:white;
+}
+.Info{
+    border:3px solid gray;
+    padding: 10px;
+    margin:25px;
+    text-align: left;
+    width:400px;
+}
+h1{
+    font-size: 72px;
+    text-align: center;
+}
+
+canvas{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    color:white;
+    border:1px solid gray;
+}
+
+#dialogButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button{
+    background-color: rgb(100, 100, 100); /* Green */
+    border: none;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    width:75px;
+    height:20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+button:active
+{
+    background-color: black;
+    color:white;
+    opacity: 0.6;
+}
