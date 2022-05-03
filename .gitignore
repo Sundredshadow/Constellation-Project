@@ -15,6 +15,7 @@ node_modules/.bin/js-yaml.cmd
 node_modules/.bin/js-yaml.ps1
 node_modules/.bin/jsesc
 node_modules/.bin/jsesc.cmd
+node_modules/.bin/jsesc.ps1
 node_modules/.bin/json5
 node_modules/.bin/json5.cmd
 node_modules/.bin/json5.ps1
@@ -19768,3 +19769,17 @@ node_modules/yargs/locales/zh_TW.json
 node_modules/yargs/package.json
 node_modules/yargs/README.md
 node_modules/yargs/yargs
+node_modules/.bin/babel-external-helpers.ps1
+node_modules/.bin/babel-external-helpers.cmd
+node_modules/.bin/babel-external-helpers
+node_modules/.bin/babel
+node_modules/.bin/acorn.ps1
+node_modules/.bin/acorn.cmd
+node_modules/.bin/acorn
+node_modules/.bin/babel-external-helpers.ps1
+node_modules/.bin/babel-external-helpers.cmd
+node_modules/.bin/babel-external-helpers
+node_modules/.bin/babel
+node_modules/.bin/acorn.ps1
+node_modules/.bin/acorn.cmd
+node_modules/.bin/acorn

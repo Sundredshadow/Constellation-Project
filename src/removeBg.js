@@ -15,7 +15,7 @@ const getImageFromRemoveBg = (request, resp, data) => {
     responseType: 'arraybuffer',
     headers: {
       ...formData.getHeaders(),
-      'X-Api-Key': '3FEtwDJvzdPsP12T6vA2FMtk',
+      'X-Api-Key': 'ozGNV7UKmVN2H8NZe4zG9jCP',
     },
     encoding: null,
   })
