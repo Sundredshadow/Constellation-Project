@@ -19,7 +19,7 @@ const play = true;
 
 let ranAI = false;
 
-const stars = [];
+let stars = [];
 let starsinMap = [];
 let starsNotInMap = [];
 
@@ -78,6 +78,9 @@ async function loadBodyPix() {
 }
 
 function initStars() {
+  starsinMap=[];
+  starsNotInMap=[];
+  stars=[];
   for (let i = 0; i < starCount; i++) {
     stars[i] = edsLIB.drawRandomCircle(ctx, width, height, 2, 'white', 0, 'white');
     stars[i].inMap = false;
@@ -274,6 +277,7 @@ async function ReadMap() {
 
     imageDataHidden = ctxHidden.getImageData(0, 0, width, height);
     SortStars(imageDataHidden);
+    
   };
 }
 
@@ -310,29 +314,50 @@ function setupUI() {
 
   document.querySelector('#getImage').onclick = () => {
     // 2. Create an XHR object to download the web service
-        // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/
-        const xhr = new XMLHttpRequest();
-        const url = '/src/removeBg';
-        
-        // 3. set `onerror` handler
-        xhr.onerror = () => console.log("error");
-        
-        // 4. set `onload` handler
-        xhr.onload = () => {
-            
-        }; // end xhr.onload
-        
-        // 5. open the connection using the HTTP GET method
-        xhr.open("GET",url);
-        
-        // 6. we could send request headers here if we wanted to
-        // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader
-        
-        // 7. finally, send the request
-        xhr.send();
-        
-        ReadMap();
-        ranAI=true;
+    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/
+    const xhr = new XMLHttpRequest();
+    const url = '/src/removeBg';
+    const param = `link=${document.getElementById('urlText').value}`;
+    const getrequest = `${url}?${param}`;
+    // 3. set `onerror` handler
+    xhr.onerror = () => console.log('error');
+
+    // 4. set `onload` handler
+    xhr.onload = () => {
+
+    }; // end xhr.onload
+
+    // 5. open the connection using the HTTP GET method
+    xhr.open('GET', getrequest, true);
+
+    // 6. we could send request headers here if we wanted to
+    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader
+
+    // 7. finally, send the request
+    xhr.send();
+
+    // send out get request for new updated img
+    const xhrImg = new XMLHttpRequest();
+    const urlImg = '/src/img/output.png';
+    // 3. set `onerror` handler
+    xhrImg.onerror = () => console.log('error');
+
+    // 4. set `onload` handler
+    xhrImg.onload = () => {
+
+    }; // end xhr.onload
+
+    // 5. open the connection using the HTTP GET method
+    xhrImg.open('GET', urlImg);
+
+    // 6. we could send request headers here if we wanted to
+    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader
+
+    // 7. finally, send the request
+    xhrImg.send();
+
+    ReadMap();
+    ranAI = true;
   }; // end onclick
 }
 

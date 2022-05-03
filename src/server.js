@@ -39,7 +39,7 @@ const urlStruct = {
     '/src/loader': scriptHandler.getScript,
     '/src/edsLIB': scriptHandler.getScript,
     '/src/flocking': scriptHandler.getScript,
-    '/src/removeBg' : removeHandler.getImageFromRemoveBg,
+    '/src/removeBg': removeHandler.getImageFromRemoveBg,
     notFound: jsonHandler.notFound,
   },
   HEAD: {
@@ -49,14 +49,13 @@ const urlStruct = {
 
 const onRequest = (request, response) => {
   const parsedUrl = url.parse(request.url);
-
   console.dir(parsedUrl.pathname);
   console.dir(request.method);
 
   if (request.method === 'POST') {
     handleQueryData(request, response);// true is post request
   } else if (parsedUrl.query) { // running GET based on id parameter
-    urlStruct.GET['/loadmap'](request, response, parsedUrl.query);
+    urlStruct.GET['/src/removeBg'](request, response, parsedUrl.query);
   } else if (urlStruct[request.method][parsedUrl.pathname]) { // handle get
     urlStruct[request.method][parsedUrl.pathname](request, response, parsedUrl);
   } else {

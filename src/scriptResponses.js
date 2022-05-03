@@ -6,7 +6,6 @@ const getScript = (request, response, parsedUrl) => {
   response.end();
 };
 
-
 module.exports = {
-  getScript
+  getScript,
 };
